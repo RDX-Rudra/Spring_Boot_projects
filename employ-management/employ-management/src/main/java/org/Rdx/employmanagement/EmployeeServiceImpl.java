@@ -5,12 +5,13 @@ import java.util.List;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service; // Import Service annotation
 
+@Service // Add Service annotation
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeRepository employeeRepository;
-    // List<Employee> employees = new ArrayList<>();
 
     @Override
     public String createEmployee(Employee employee) {
@@ -58,5 +59,4 @@ public class EmployeeServiceImpl implements EmployeeService {
         BeanUtils.copyProperties(newEmployee, employee);
         return employee;
     }
-
 }
