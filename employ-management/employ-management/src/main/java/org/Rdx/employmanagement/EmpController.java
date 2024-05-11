@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @CrossOrigin("htpp://localhost:3000")
 @RestController
-// @RequestMapping("../frontend/empmanagement/")
+@RequestMapping("/api/v1/")
 public class EmpController {
     
     // List<Employee> employees = new ArrayList<>();
